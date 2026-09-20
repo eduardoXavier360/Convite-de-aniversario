@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Festa Surpresa da Josy 🌸</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: linear-gradient(135deg, #f3ebf7 0%, #e2d3ed 100%);
+      color: #3d2b4e;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+    .container {
+      max-width: 440px;
+      width: 100%;
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 24px;
+      box-shadow: 0 15px 35px rgba(107, 62, 142, 0.15);
+      border: 1px solid #e0d0eb;
+      text-align: center;
+    }
+    .convite-img {
+      width: 100%;
+      height: auto;
+      border-radius: 16px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+      margin-bottom: 20px;
+      display: block;
+    }
+    .btn-group {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 10px;
+    }
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      padding: 16px 20px;
+      border-radius: 50px;
+      font-size: 16px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .btn:active {
+      transform: scale(0.98);
+    }
+    .btn-maps {
+      background: linear-gradient(135deg, #7b4397 0%, #dc2430 100%);
+      background: #6b3e8e;
+      color: #ffffff;
+      box-shadow: 0 4px 14px rgba(107, 62, 142, 0.3);
+    }
+    .btn-wsp {
+      background: #25D366;
+      color: #ffffff;
+      box-shadow: 0 4px 14px rgba(37, 211, 102, 0.3);
+    }
+    .footer-note {
+      margin-top: 18px;
+      font-size: 13px;
+      color: #8a739b;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Substitua o src pelo nome ou caminho da imagem do seu convite -->
+    <img src="convite.png" alt="Convite Festa Surpresa da Josy" class="convite-img">
+
+    <div class="btn-group">
+      <!-- Botão para o Google Maps com o seu link -->
+      <a href="https://maps.app.goo.gl/X4S2oj9GpzUpzG6N8?g_st=ac" target="_blank" rel="noopener noreferrer" class="btn btn-maps">
+        📍 Como Chegar (Google Maps)
+      </a>
+
+      <!-- Botão de Confirmação via WhatsApp (Altere o número '5500000000000' para o seu) -->
+      <a href="https://wa.me/5500000000000?text=Ol%C3%A1!%20Confirmo%20minha%20presen%C3%A7a%20na%20festa%20surpresa%20da%20Josy!%20%F0%9F%8E%89" target="_blank" rel="noopener noreferrer" class="btn btn-wsp">
+        📲 Confirmar Presença
+      </a>
+    </div>
+
+    <p class="footer-note">🤫 Lembre-se: É uma festa surpresa!</p>
+  </div>
+
+</body>
+</html>

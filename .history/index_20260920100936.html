@@ -2,16 +2,6 @@
 <html lang="pt-BR">
 
 <head>
-    <!-- Título e descrição -->
-    <meta property="og:title" content="Festa surpresa da Josy" />
-    <meta property="og:description" content="Convite virtual para a festa surpresa da Josy." />
-
-    <!-- Imagem temporária de festa (link direto) -->
-    <meta property="og:image"
-        content="https://images.unsplash.com/photo-1513151233558-d860c5398176?w=800&auto=format&fit=crop" />
-    <meta property="og:image:type" content="image/jpeg" />
-    <meta property="og:image:width" content="800" />
-    <meta property="og:image:height" content="533" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Festa surpresa da Josy</title>
@@ -272,22 +262,7 @@
             display: flex;
             flex-direction: column;
             gap: 1.1rem;
-            align-items: stretch
-        }
-
-        .map-frame {
-            width: 100%;
-            overflow: hidden;
-            border: 1px solid var(--line);
-            border-radius: 18px;
-            background: var(--soft)
-        }
-
-        .map-frame iframe {
-            display: block;
-            width: 100%;
-            height: 300px;
-            border: 0
+            align-items: flex-start
         }
 
         .location .button-row {
@@ -302,7 +277,7 @@
             padding: .75rem 1rem;
             background: var(--soft);
             color: var(--deep);
-            font-weight: 800;
+            font-weight: 700;
             text-decoration: none;
             cursor: pointer;
             transition: .2s
@@ -384,7 +359,7 @@
 
         .footer a {
             color: var(--deep);
-            font-weight: 800;
+            font-weight: 700;
             text-decoration: none
         }
 
@@ -572,19 +547,14 @@
                     <div>
                         <div class="eyebrow">Como chegar</div>
                         <h2 style="margin:.5rem 0;font-size:2rem;color:var(--deep)">Espaço Barros Evento e Lazer</h2>
-                        <p style="margin:0;color:var(--muted)">Confira o mapa e abra a rota no aplicativo de sua
-                            preferência.</p>
+                        <p style="margin:0;color:var(--muted)">Abra a rota no aplicativo de sua preferência.</p>
                     </div>
-                    <div class="map-frame"><iframe
-                            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d744.6239111489955!2d-46.64452806781656!3d-14.103773373571487!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1spt-BR!2sbr!4v1789909748172!5m2!1spt-BR!2sbr"
-                            title="Mapa do Espaço Barros Evento e Lazer" allowfullscreen="" loading="lazy"
-                            referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
                     <div class="button-row"><a class="button primary"
-                            href="https://www.google.com/maps/search/?api=1&query=-14.103773373571487%2C-46.64452806781656"
+                           
                             target="_blank" rel="noopener">Google Maps</a><a class="button"
-                            href="https://waze.com/ul?ll=-14.103773373571487%2C-46.64452806781656&navigate=yes"
-                            target="_blank" rel="noopener">Waze</a><a class="button" id="calendar" href="#"
-                            target="_blank" rel="noopener">Adicionar à agenda</a></div>
+                            href="https://waze.com/ul?q=Espa%C3%A7o%20Barros%20Evento%20e%20Lazer" target="_blank"
+                            rel="noopener">Waze</a><a class="button" id="calendar" href="#" target="_blank"
+                            rel="noopener">Adicionar à agenda</a></div>
                 </div>
             </section>
             <section class="section" id="rsvp">
@@ -604,13 +574,12 @@
                 </div>
             </section>
         </main>
-        <footer class="footer">Desenvolvedor por Eduardo<br><a
-                href="https://www.instagram.com/edu.devjs?stkn=OWt4YThsZHoxN2F4" target="_blank" rel="noopener"
-                aria-label="Instagram de Eduardo">◎ @edu.devjs</a></footer>
+        <footer class="footer">Desenvolvedor por Eduardo<br><a href="https://instagram.com/seu_instagram"
+                target="_blank" rel="noopener" aria-label="Instagram">◎ @seu_instagram</a></footer>
     </div>
     <script>
         // Personalize este número com DDI + DDD, sem espaços ou símbolos.
-        const ORGANIZER_WHATSAPP = '5562999203393';
+        const ORGANIZER_WHATSAPP = '5500000000000';
         // Ajuste o ano se necessário. O convite usa a próxima ocorrência de 26 de setembro.
         const now = new Date(), eventDate = new Date(now.getFullYear(), 8, 26, 19, 30, 0);
         if (eventDate < now) eventDate.setFullYear(now.getFullYear() + 1);
@@ -622,3 +591,5 @@
         document.querySelector('#rsvpForm').addEventListener('submit', e => { e.preventDefault(); const name = document.querySelector('#name').value.trim(), guests = document.querySelector('#guests').value; const text = `Olá! Sou o ${name} e confirmo minha presença na festa surpresa da Josy! Acompanhantes: ${guests}.`; document.querySelector('#success').style.display = 'block'; window.open(`https://wa.me/${ORGANIZER_WHATSAPP}?text=${encodeURIComponent(text)}`, '_blank', 'noopener'); });
     </script>
 </body>
+
+</html>
