@@ -150,6 +150,38 @@
             transition: .25s ease;
         }
 
+        .location-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: .4rem;
+
+            width: fit-content;
+            margin: .7rem auto 0;
+            padding: .55rem .9rem;
+
+            border: 1px solid var(--line);
+            border-radius: 999px;
+
+            background: #ffffffb8;
+            color: var(--deep);
+
+            font-size: .68rem;
+            font-weight: 800;
+            letter-spacing: .08em;
+            text-decoration: none;
+
+            box-shadow: 0 7px 20px rgba(86, 62, 100, .10);
+
+            transition: .25s ease;
+        }
+
+        .location-button:hover {
+            transform: translateY(-2px);
+            background: #fff;
+            box-shadow: 0 10px 25px rgba(86, 62, 100, .16);
+        }
+
         .details-button span {
             font-size: 1rem;
             line-height: 1;
@@ -704,6 +736,9 @@
                         <div class="icon">📍</div>
                         <h3>Onde</h3>
                         <p>Espaço Barros<br>Evento e Lazer</p>
+                        <a class="location-button" href="#localizacao">
+                            📍 VER LOCALIZAÇÃO
+                        </a>
                     </article>
                     <article class="card info-card">
                         <div class="icon">💜</div>
@@ -713,7 +748,7 @@
                     </article>
                 </div>
             </section>
-            <section class="section">
+            <section class="section" id="localizacao">
                 <div class="card location">
                     <div>
                         <div class="eyebrow">Como chegar</div>
